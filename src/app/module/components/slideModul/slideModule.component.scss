@@ -39,7 +39,9 @@
      margin-top: 30px;
      .slideMini {
          display: flex;
+         margin: 0 auto;
          gap: 2px;
+         width: 70%;
          div {
              width: 90%;
              .block {

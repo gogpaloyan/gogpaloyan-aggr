@@ -4,6 +4,7 @@
     display: grid;
     grid-template-rows: auto auto;
     border-radius: 10px;
+    transition: 0.2s ease-in;
     .myProduct{
         margin: 0 auto;
         background-color: red;
@@ -19,7 +20,10 @@
     }
 
 }
-
+.product:hover{
+    opacity: 0.9;
+    background-color: #FFFFFD;
+}
 @media only screen and (max-width: 1200px) {
     .product {
         div{

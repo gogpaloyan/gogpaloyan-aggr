@@ -7,7 +7,7 @@ import { DataService } from "src/app/service/data.service";
 @Component({
     selector: "app-addProduct",
     templateUrl: "./addProduct.component.html",
-    styleUrls: ["./addProduct.component.scss"]
+    styleUrls: ["./addProduct.component.scss"],
 })
 
 

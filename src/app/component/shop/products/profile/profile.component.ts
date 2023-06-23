@@ -1,3 +1,4 @@
+import { animate, style, transition, trigger } from "@angular/animations";
 import { Component, OnInit } from "@angular/core";
 import { Title } from "@angular/platform-browser";
 import { Router } from "@angular/router";
@@ -7,7 +8,16 @@ import { DataService } from "src/app/service/data.service";
 @Component({
     selector: "app-profile",
     templateUrl: "./profile.component.html",
-    styleUrls: ["./profile.component.scss"]
+    styleUrls: ["./profile.component.scss"],
+    animations: [
+        trigger('animation', [
+          transition('on => visible', [
+            style({transform: 'scale(0.5)'}),
+            animate('150ms', style({transform: 'scale(1)'}))
+          ]),
+        ]),
+
+      ]
 })
 
 
