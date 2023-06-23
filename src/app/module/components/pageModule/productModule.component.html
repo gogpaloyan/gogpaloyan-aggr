@@ -1,0 +1,18 @@
+
+<div class="product" >
+    <div *ngIf="basketShow" class="myProduct"> My Product</div>
+    <span>{{product.type}}</span>
+    <span> {{product.title}}</span>
+    <span>
+         <span *ngIf="product.count > 0">Count {{product.count}} </span>
+         <span *ngIf="product.count <= 0">Is over</span>
+    </span>
+    <div [routerLink]="'/product/' + product.id" ><img [src]="product.image[0]" ></div>
+    <span>Price {{ product.price }} $</span>
+    <ng-content [select]="delete"></ng-content>
+    <div *ngIf="auth">
+        <div *ngIf="!basketShow && !basket" (click)="onAddBasket()" HoverDirective  class="basket">Add Basket</div>
+        <div *ngIf="basket" (click)="onDeleteBasket()" HoverDirective >delete Basket</div>
+    </div>
+</div>
+

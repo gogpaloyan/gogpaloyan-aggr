@@ -1,0 +1,35 @@
+<form [formGroup]="form" (ngSubmit)="submit()" >
+
+
+    <div [ngClass]="{'incorrectForm' : formError }">
+        <input type="text" formControlName="name" placeholder="name" autofocus>
+    </div>
+    <div [ngClass]="{'incorrectForm' : formError }">
+        <input type="text" formControlName="surName" placeholder="surname">
+    </div>
+    <div [ngClass]="{'incorrectForm' : formError }">
+        <input type="text" formControlName="phone" placeholder="tel +37477053132">
+    </div>
+    <div [ngClass]="{'incorrectForm' : formError }">
+        <input type="email" formControlName="email" placeholder="email">
+    </div>
+    <div *ngIf="loginError" class="error"> 
+        Login arleady registed
+    </div>
+    <div [ngClass]="{'incorrectForm' : formError }">
+        <input type="password" formControlName="password" placeholder="password" autoComplete="true"    >
+    </div>
+    <div [ngClass]="{'incorrectForm' : formError }">
+        <input type="password" formControlName="rpassword" placeholder="repead password" autoComplete="true">
+    </div>
+    <div *ngIf="repeadPassword" class="error">
+        password or repead password incorrect
+    </div>
+    <div *ngIf="formError" class="error">
+        form incorect
+    </div>
+
+    <div>
+        <button>Submit</button>
+    </div>
+</form>

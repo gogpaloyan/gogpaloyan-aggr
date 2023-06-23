@@ -1,0 +1,9 @@
+<div class="container">
+    <div *ngFor="let product of products" class="products">
+        <div class="product" [routerLink]="'/product/' + product.id" (click)="UpDate()">
+            <div>{{product.price | currency}}</div>
+            <img [src]="product.image[0]"  >
+            <div>{{product.title}}</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,69 @@
+<div class="add" [ngClass]="{'remove': add}" (click)="add = !add">{{add ? "Close" : "Add Product"}}</div>
+
+
+<form *ngIf="add" [formGroup]="forms" class="addProduct" (submit)="submit()">
+    <div class="category">
+        <span>Category</span>
+        <select formControlName="category">
+            <option value="mixed">Mixed</option>
+            <option value="phone">Phone</option>
+            <option value="laptop">Laptop</option>
+            <option value="TV">TV</option>
+            <option value="car">Car</option>
+        </select>
+    </div>
+
+    <div class="category">
+        <span>Type</span>
+        <input type="text" formControlName="type">
+    </div>
+
+    <div class="category">
+        <span>Title</span>
+        <input type="text" formControlName="title">
+    </div>
+    <div class="category">
+        <span>Count</span>
+        <input type="number" formControlName="count">
+    </div>
+
+    <div class="category">
+        <span>Model</span>
+        <input type="text" formControlName="model">
+    </div>
+    <div class="category">
+        <span>Image</span>
+        <label class="addImage">
+            <span>Add Image</span>
+            <input type="file" (change)="select($event)" class="file">
+        </label>
+
+    </div>
+    <div>
+        <div *ngFor="let img of image">
+            <div class="image">
+                <img [src]="img">
+                <span (click)="onDeleteImage(img)">X</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="category">
+        <span>Description</span>
+        <textarea formControlName="description"></textarea>
+    </div>
+
+    <div class="category">
+        <span>Price</span>
+        <input type="number" formControlName="price">
+    </div>
+
+    <div class="category">
+        <span>Specifications</span>
+        <textarea type="text" formControlName="specifications"> </textarea>
+    </div>
+
+    <div class="category">
+        <button>Add Product</button>
+    </div>
+</form>

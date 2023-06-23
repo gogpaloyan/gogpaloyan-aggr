@@ -1,0 +1,17 @@
+<nav class="nav">
+    <div routerLinkActive="active" class="logo"  [routerLinkActiveOptions]="{exact:true}"><a routerLink="">Shop Logo</a></div>
+    <div class="category">
+        <span routerLinkActive="active" routerLink="./category">Category</span>
+        <div class="mode">
+            <div routerLink="./category/car" routerLinkActive="active"><a>Car</a></div>
+            <div routerLink="./category/phone" routerLinkActive="active"><a>Phone</a></div>
+            <div routerLink="./category/laptop" routerLinkActive="active"><a>Laptop</a></div>
+            <div routerLink="./category/tv" routerLinkActive="active"><a>Tv</a></div>
+            <div routerLink="./category/mixed" routerLinkActive="active"><a>Mixed</a></div>
+        </div>
+    </div>
+
+    <span routerLink="/profile" class="profile" routerLinkActive="active">{{name}}</span>
+
+
+</nav>

@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="slide">
+        <img [src]="images[image]" class="photo">
+        <span *ngIf="showArrow" (click)="imagePrev()" class="prev">&#8656;</span>
+        <span *ngIf="showArrow" (click)="imageNext()" class="next">&#8658;</span>
+    </div>
+</div>
+
+
+<div class="minSlide">
+
+    <div class="slideMini">
+        <div *ngFor="let item of images | imagePipe, let i = index">
+            <span class="block" [ngClass]="{'active': i === image}">
+                <img [src]="item" (click)="checkImage(i)">
+            </span>
+        </div>
+    </div>
+</div>

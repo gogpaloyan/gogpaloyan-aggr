@@ -1,0 +1,17 @@
+.error{
+    margin-top: 250px;
+    background-color: #263238;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    .return{
+        margin-top: 10px;
+        color: red;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: white;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,77 @@
+.nav {
+    font-size: 26px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    background-color: #263238;
+    display: flex;
+    justify-content: space-around;
+    z-index: 11;
+    .logo {
+        a {
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 12px;
+        }
+    }
+    .category{
+        position: relative;
+        span{
+            color: white;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 12px;
+        }
+        .active{
+            background-color: white;
+            color: #263238;
+        }
+        .mode{
+            display: none;
+            position: absolute;
+            cursor: pointer;
+            background-color: #263238;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            div{
+                border-radius: 10px;
+            }
+            div:hover{
+                
+                background-color: white;
+                color: #263238;
+            }
+        }
+    }
+    .category:hover{
+        .mode{
+            display: block;
+            .active{
+                background-color: white;
+                color: #263238;
+            }
+        }
+    }
+    .profile{
+        color: white;
+        cursor: pointer;
+        padding: 5px 10px;
+        border-radius: 12px;
+    }
+    .active{
+        background-color: white;
+        color: #263238;
+        border-radius: 12px;
+        a{
+            text-decoration: none;
+            background-color: white;
+            color: #263238;
+            cursor: pointer;
+            padding: 0 20px;
+        }
+    }
+}

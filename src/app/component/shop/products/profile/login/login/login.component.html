@@ -1,0 +1,17 @@
+<form [formGroup]="form" (ngSubmit)="submit()" >
+
+<div>for example Email: admin Pasword:admin</div>
+    <div>
+        <input type="text" formControlName="userName" placeholder="email"  autofocus>
+    </div>
+    <div>
+        <input type="password" formControlName="password" placeholder="password" autoComplete="true">
+    </div>
+    <div *ngIf="error" class="error">
+        error incorrect email or password
+    </div>
+
+    <div>
+        <button>Submit</button>
+    </div>
+</form>

@@ -1,0 +1,48 @@
+
+
+
+<div class="title">
+    <div class="breadCrumbs">
+        <span class="item" routerLink="">Agregator/</span>
+        <span class="item" [routerLink]="'/category/'+ product.category">{{product.category}}/</span>
+        <span>{{url.value[0]}}/</span>
+        <span>{{url.value[1]}}</span>
+    </div>
+    <div>{{product.title}}</div>
+    <div> City {{product.city}}</div>
+    <div> Price {{product.price | currency}}</div>
+</div>
+<app-slideModule [images]="product.image"></app-slideModule>
+
+<div class="container">
+    <div> Count {{product.count | numberNegative}}</div>
+    <div *ngIf="!myProd">
+        <div *ngIf="!basket" (click)="onAddBasket(product)" class="basket">Add to basket</div>
+        <div *ngIf="basket" (click)="onDeleteBasket(product.id)" class="basket">delete in basket</div>
+    </div>
+
+    <div class="description">
+        <div>Description</div>
+        <div>
+            <div> Model {{product.type}}</div>
+            {{product.Description}}
+        </div>
+    </div>
+    <div class="specifications" >
+        <div>Specifications</div>
+       <span>{{product.Specifications | json}}</span>>
+        
+
+    </div>
+    <div class="profile">
+        <div class="profile">
+            <div>{{product.name}}</div>
+            <img [src]="product.imageProfile">
+            <a [href]="'tel:' + product.phone">Call {{product.phone}}</a> 
+        </div>
+    </div>
+
+
+
+</div>
+<app-asideModule [products]="footer" (upDate)="upDate()"></app-asideModule>

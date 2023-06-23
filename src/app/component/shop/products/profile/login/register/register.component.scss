@@ -1,0 +1,38 @@
+form{
+    margin-top: 30px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 15px;
+    .incorrectForm{
+        input{
+            border: red solid 2px;
+        }
+    }
+    .error{
+        color: red;
+    }
+    div{
+        .ng-touched.ng-invalid{
+            border: red solid 2px
+        }
+        .ng-pristine.ng-dirty {
+            border: red solid 2px
+        }
+        
+        .ng-valid{
+            border: green solid 2px
+        }
+        input{
+            padding: 5px;
+            background-color: wheat;
+            border-radius: 10px;
+        }
+        button{
+            padding: 10px;
+            color: white;
+            background-color: #263238;
+            border-radius: 10px;
+        }
+    }
+}
