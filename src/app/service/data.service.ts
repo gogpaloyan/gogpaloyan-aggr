@@ -1141,7 +1141,8 @@ export class DataService {
                     data: {
                         name: product.name,
                         surName: product.surName,
-                        image: product.image
+                        image: product.image,
+                        phone: product.phone
                     }
                 
                 } 

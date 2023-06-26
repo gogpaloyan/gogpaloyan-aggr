@@ -3,9 +3,24 @@
 .data{
     margin-top: 80px;
     text-align: center;
-    img{
-        width: 100px;
+    div{
+        img{
+            width: 100px;
+            border-radius: 10px;
+        }
+        a{
+            text-align: center;
+            background-color: #F5F6FD;
+            padding: 5px;
+            border-radius: 10px;
+            transition: 0.3s ease-in;
+        }
+        a:hover{
+            background-color: white
+
+        }
     }
+    
 }
 
 .component{

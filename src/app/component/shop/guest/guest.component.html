@@ -1,6 +1,7 @@
 <div class="data">
     <div>{{profileProduct.data.name}} {{profileProduct.data.surName}}</div>
-    <img [src]="profileProduct.data.image ">
+    <div><img [src]="profileProduct.data.image "></div>
+    <div><a [href]="'tel:' + profileProduct.data.phone">call {{profileProduct.data.phone}}</a></div>
 </div>
 
 <div class="component">
