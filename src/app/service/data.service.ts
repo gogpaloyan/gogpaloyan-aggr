@@ -1105,11 +1105,13 @@ export class DataService {
                     title: form.title,
                     city: form.city,
                     count: form.count,
+                    imageProfile:  this.userData.image,
                     profid: this.userData.id,
                     image: image,
                     price: form.price,
-                    Specifications: form.specification,
+                    Specifications: form.specifications,
                     Description: form.description,
+
                 })
             },
             addBasket: (product: any) => {

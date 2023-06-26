@@ -1,7 +1,20 @@
 
-
-.data{
+.breadCrumbs{
     margin-top: 80px;
+    text-align: left;
+    .item{
+    transition: 0.4s ease-in;
+    padding: 2px;
+    color: white;
+    background-color: #6495ED;
+    cursor: pointer;
+    border-radius: 5px;
+    }
+    .item:hover{
+        background-color: red;
+    }
+}
+.data{
     text-align: center;
     div{
         img{

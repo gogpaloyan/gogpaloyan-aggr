@@ -16,6 +16,7 @@ export class GuestComponent implements OnInit{
 
     id: any
     profileProduct: any
+
     
     constructor(private Data: DataService, private ActivatedRouter: ActivatedRoute){}
 
