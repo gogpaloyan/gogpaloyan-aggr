@@ -16,6 +16,7 @@ import { ErrorComponent } from './module/components/404/error.component';
 import { ProductModule } from './module/components/pageModule/productModule.module';
 import { NumberNegative } from './pipe/numberNegative/numberNegative.pipe';
 import { ImagePipe } from './pipe/numberNegative/imagepipe.pipe';
+import { GuestComponent } from './component/shop/guest/guest.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ImagePipe } from './pipe/numberNegative/imagepipe.pipe';
     SlideModuleComponent,
     AsideModuleComponent,
     CategoryComponent,
+    GuestComponent,
     ErrorComponent,
     NumberNegative,
     ImagePipe
