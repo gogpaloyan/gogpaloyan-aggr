@@ -1101,6 +1101,7 @@ export class DataService {
                     id: Math.random(),
                     phone: this.userData.phone,
                     category: form.category,
+                    name: this.userData.name,
                     type: form.type,
                     title: form.title,
                     city: form.city,

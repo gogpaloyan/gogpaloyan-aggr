@@ -36,8 +36,10 @@
     </div>
     <div class="profile">
         <div class="profile">
-            <div>{{product.name}}</div>
-            <img [src]="product.imageProfile" [routerLink]="'/goust/' + product.profid ">
+            <div [routerLink]="'/goust/' + product.profid ">
+                <div>{{product.name}}</div>
+                <img [src]="product.imageProfile" >
+            </div>
             <a [href]="'tel:' + product.phone">Call {{product.phone}}</a> 
         </div>
     </div>
