@@ -25,13 +25,14 @@ export class ProfileComponent implements OnInit {
 
     auth: boolean = false
     userData: any
+    logOutshow: boolean = false
+
 
 
     logOut() {
         localStorage.clear()
         this.Data.userData = undefined
         return this.Router.navigate([""])
-        // return window.location.reload()
     }
     ngOnInit() {
         this.userData = this.Data.userData

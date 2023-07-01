@@ -1,41 +1,64 @@
-<div class="container">
-<div *ngIf="auth" >
-    <div class="profile">
-        <img [src]="userData.image">
-        <span>{{userData.name}} {{userData.surName}}</span>
-        <div class="logOut" (click)="logOut()">Log Out</div>
-        <app-addProduct></app-addProduct>
-    </div>
-
-    <div class="myProduct">
-        <div *ngIf="userData.userDataBase.basket != false">My Basket</div>
-        <div *ngIf="userData.userDataBase.basket == false">Basket yet undefined</div>
+<div>
+    <div *ngIf="auth" [ngClass]="{'logOutAcount':logOutshow}">
         <div class="component">
-           <app-productModule *ngFor="let product of userData.userDataBase.basket" [product]="product" [routerLink]="'/product/' + product.id" class="product">
-            <span >my basket</span>
-           </app-productModule>
-        </div>
-    </div>
-
-    <div class="myProduct">
-        <div>My Products</div>
-        <div class="component">
-            <app-productModule *ngFor="let product of userData.userDataBase.myProduct" [product]="product" [routerLink]="'/product/' + product.id" class="product" >
-                <button class="delete" (click)="onDeleteProduct(product.id)">Delete</button>
-            </app-productModule>
+            <div class="text">
+            Forget acount
+            </div>
+            <div class="button">
+                <button (click)="logOutshow = false">Cancel</button>
+                <button (click)="logOut()">LogOut</button>
+            </div>
         </div>
     </div>
 
 
-</div>
-
-<div *ngIf="!auth">
-    <div class="nav">
-        <a routerLink="./login" routerLinkActive="active">Login</a>
-        <a routerLink="./register" routerLinkActive="active">Register</a>
+    <!-- //component -->
+<div class="container" [ngClass]="{'logouts': logOutshow}">
+    <div *ngIf="auth" >
+        <div class="profile">
+            <img [src]="userData.image">
+            <span>{{userData.name}} {{userData.surName}}</span>
+            <div class="logOut" (click)="logOutshow = true">Log Out</div>
+            <app-addProduct></app-addProduct>
+        </div>
+    
+        <div class="myProduct">
+            <div *ngIf="userData.userDataBase.basket != false">My Basket</div>
+            <div *ngIf="userData.userDataBase.basket == false">Basket yet undefined</div>
+            <div class="component">
+               <app-productModule *ngFor="let product of userData.userDataBase.basket" [product]="product" [routerLink]="'/product/' + product.id" class="product">
+                <span >my basket</span>
+               </app-productModule>
+            </div>
+        </div>
+    
+        <div class="myProduct">
+            <div>My Products</div>
+            <div class="component">
+                <app-productModule *ngFor="let product of userData.userDataBase.myProduct" [product]="product" [routerLink]="'/product/' + product.id" class="product" >
+                    <button class="delete" (click)="onDeleteProduct(product.id)">Delete</button>
+                </app-productModule>
+            </div>
+        </div>
+    
+    
     </div>
-    <router-outlet (activate)="onActivate($event)"></router-outlet>
+    
+    <div *ngIf="!auth">
+        <div class="nav">
+            <a routerLink="./login" routerLinkActive="active">Login</a>
+            <a routerLink="./register" routerLinkActive="active">Register</a>
+        </div>
+        <router-outlet (activate)="onActivate($event)"></router-outlet>
+    </div>
+    
+    
+    </div>
+
 </div>
 
 
-</div>
+
+
+
+

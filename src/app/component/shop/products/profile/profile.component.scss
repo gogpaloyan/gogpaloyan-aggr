@@ -1,5 +1,42 @@
 
 
+.logOutAcount{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6E6866;
+    width: 100%;
+    height: 100%;
+    .component{
+        background-color: #1B212D;
+        color: white;
+        padding: 12px;
+        position: absolute;
+        .text{
+            color: red;
+        }
+        .button{
+            display: flex;
+            justify-content: space-around;
+            button{
+                border-radius: 10px;
+                padding: 10px;
+                cursor: pointer;
+                transition: 0.3s ease-in;
+            }
+            button:hover{
+                background-color: red;
+                color: white;
+            }
+            
+        }
+    }
+}
+
+.logouts{
+    display: none;
+}
 
 div{
     .nav{
