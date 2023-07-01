@@ -14,6 +14,7 @@ export class MyComponent implements OnInit{
 
     cars: any = []
     phones: any = []
+    laptop: any = []
 
 
     ngOnInit(){
@@ -26,6 +27,11 @@ export class MyComponent implements OnInit{
         let phone = this.Data.Data.getProduct("phone").sort()
         for(let i = 0; i < 4; i++){
             this.phones.push(phone[i])
+        }
+        //laptop
+        let laptop = this.Data.Data.getProduct("laptop").sort()
+        for(let i = 0; i < 4; i++){
+            this.laptop.push(laptop[i])
         }
     }
 

@@ -1,3 +1,11 @@
+    .productName{
+        background-color: cornflowerblue;
+        padding: 5px;
+        border-radius: 10px;
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+    }
     .component{
         display: grid;
         grid-template-columns: auto auto auto auto;

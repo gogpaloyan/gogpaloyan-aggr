@@ -1,14 +1,21 @@
 
 <div style="text-align: center; margin-top: 50px;">
-    <span >Cars</span>
+    <span class="productName">Cars</span>
     <div class="component">
         <app-productModule *ngFor="let product of cars" [product]="product" class="product" ></app-productModule>
     </div>
 </div>
 
 <div style="text-align: center; margin-top: 40px;">
-    <span >Phone</span>
+    <span class="productName">Phone</span>
     <div class="component">
         <app-productModule *ngFor="let product of phones" [product]="product" class="product"  ></app-productModule>
+    </div>
+</div>
+
+<div style="text-align: center; margin-top: 40px;">
+    <span class="productName">Laptop</span>
+    <div class="component">
+        <app-productModule *ngFor="let product of laptop" [product]="product" class="product"  ></app-productModule>
     </div>
 </div>
