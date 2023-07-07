@@ -7,6 +7,16 @@
     <div [ngClass]="{'incorrectForm' : formError }">
         <input type="text" formControlName="surName" placeholder="surname">
     </div>
+    
+    <div>
+        <label>
+            <div>Photo</div>
+            <input type="file" (change)="select($event)" class="file">
+        </label>
+    </div>
+    <div *ngIf="profilePhoto">
+        <img [src]="profilePhoto" >
+    </div>
     <div [ngClass]="{'incorrectForm' : formError }">
         <input type="text" formControlName="phone" placeholder="tel +37477053132">
     </div>

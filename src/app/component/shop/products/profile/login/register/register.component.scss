@@ -34,5 +34,22 @@ form{
             background-color: #263238;
             border-radius: 10px;
         }
+        label{
+
+            div{
+                background-color: #263238;
+                border-radius: 10px;
+                cursor: pointer;
+                color: white;
+                padding: 5px;
+            }
+            .file{
+                display: none;
+            }
+        }
+        img{
+            width: 100px;
+            border-radius: 10px;
+        }
     }
 }

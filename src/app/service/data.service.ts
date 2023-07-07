@@ -1154,7 +1154,7 @@ export class DataService {
         },
     },
         autification: {
-            register: (data: any) => {
+            register: (data: any, photoProfile:any) => {
                 console.log(data)
                 return this.Data.users = [...this.Data.users, {
                     id: Math.random(),
@@ -1162,6 +1162,7 @@ export class DataService {
                     surName: data.surName,
                     birth: data.birth,
                     phone: data.phone,
+                    image: photoProfile,
                     userName: data.email,
                     password: data.password,
                     userDataBase: {
@@ -1184,7 +1185,16 @@ export class DataService {
                 })
             },
             checkToken: () => {
-                return localStorage.getItem("userName") !== null && localStorage.getItem("password") !== null
+                let email = localStorage.getItem("userName")
+                let password = localStorage.getItem("password")
+                if( email !== null && password !== null){
+                    return this.Data.users.find((val: any) => {
+                        if (val.userName == email && val.password == password) {
+                            return true
+                        } else {
+                            return false
+                        }})
+                        }
             },
             auth: () => {
                 if (this.Data.autification.checkToken()) {
@@ -1206,7 +1216,7 @@ export class DataService {
                     if (val.userName == login) {
                         return true
                     } else {
-                        return
+                        return false
                     }
                 })
             },

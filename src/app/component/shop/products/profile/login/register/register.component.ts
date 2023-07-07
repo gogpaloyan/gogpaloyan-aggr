@@ -16,6 +16,7 @@ export class RegisterComponent {
     formError: boolean = false
     loginError: boolean = false
     repeadPassword: boolean = false
+    profilePhoto: any
 
 
     form = new FormGroup({
@@ -35,7 +36,7 @@ export class RegisterComponent {
             if(this.form.value.password === this.form.value.rpassword && this.form.valid){
                 alert("registerd ok")
                 this.Router.navigate(["profile/login"])
-                return this.Data.Data.autification.register(this.form.value)
+                return this.Data.Data.autification.register(this.form.value, this.profilePhoto)
             }else if(this.form.invalid){
                 return this.formError = true
             }else{
@@ -43,6 +44,18 @@ export class RegisterComponent {
                 return this.repeadPassword = true
             }
              
+        }
+    }
+
+    select(e: any){
+        if(e.target.files){
+            let render = new FileReader();
+            render.readAsDataURL(e.target.files[0])
+            render.onload = (event: any) => {
+                return this.profilePhoto = event.target.result
+            } 
+        }else{
+            return 
         }
     }
     
